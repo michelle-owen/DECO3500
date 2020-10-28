@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Softskill Development</title>
+        <meta charset= ="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+        <script src="js/home.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        
+    </head>
+    
+    <body>
+        <nav id="main-menu">
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="player1.html">Player 1</a>
+                </li>
+                <li>
+                    <a href="player2.html">Player 2</a>
+                </li>
+                <li>
+                    <a href="player3.html">Player 3</a>
+                </li>
+                <li>
+                    <a href="player4.html">Player 4</a>
+                </li>
+                <li>
+                    <a id="current-page" href="observer.html">Observer</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!--Container for game display-->
+        <div class="game-container">
+            <div class="game-display">
+                <ul>
+                    <li>
+                        <button class="start-cell"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C2" onclick="gridToggle('R1C2');"></button>
+                    </li>
+                    <li>
+                        <button class="o1-cell" id="R1C3" disabled onclick="gridToggle('R1C3');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C4" onclick="gridToggle('R1C4');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C5" onclick="gridToggle('R1C5');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C6" onclick="gridToggle('R1C6');"></button>
+                    </li>
+                    <li>
+                        <button class="o1-cell" id="R1C7" disabled onclick="gridToggle('R1C7');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C8" onclick="gridToggle('R1C8');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C9" onclick="gridToggle('R1C9');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C10" onclick="gridToggle('R1C10');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C11" onclick="gridToggle('R1C11');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R1C12" onclick="gridToggle('R1C12');"></button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="blank-cell" id="R2C1" onclick="gridToggle('R2C1');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C2" onclick="gridToggle('R2C2');"></button>
+                    </li>
+                    <li>
+                        <button class="o1-cell" id="R2C3" disabled onclick="gridToggle('R2C3');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C4" onclick="gridToggle('R2C4');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C5" onclick="gridToggle('R2C5');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C6" onclick="gridToggle('R2C6');"></button>
+                    </li>
+                    <li>
+                        <button class="o1-cell" id="R2C7" disabled onclick="gridToggle('R2C7');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C8" onclick="gridToggle('R2C8');"></button>
+                    </li>
+                    <li>
+                        <button class="o4-cell" id="R2C9" disabled onclick="gridToggle('R2C9');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C10" onclick="gridToggle('R2C10');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C11" onclick="gridToggle('R2C11');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R2C12" onclick="gridToggle('R2C12');"></button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="blank-cell" id="R3C1" onclick="gridToggle('R3C1');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R3C2" onclick="gridToggle('R3C2');"></button>
+                    </li>
+                    <li>
+                        <button class="o1-cell" id="R3C3" disabled onclick="gridToggle('R3C3');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R3C4" onclick="gridToggle('R3C4');"></button>
+                    </li>
+                    <li>
+                        <button class="o2-cell" id="R1C5" disabled onclick="gridToggle('R3C5');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R3C6" onclick="gridToggle('R3C6');"></button>
+                    </li>
+                    <li>
+                        <button class="o1-cell" id="R3C7" disabled onclick="gridToggle('R3C7');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R3C8" onclick="gridToggle('R3C8');"></button>
+                    </li>
+                    <li>
+                        <button class="o4-cell" id="R3C9" disabled onclick="gridToggle('R3C9');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R3C10" onclick="gridToggle('R3C10');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R3C11" onclick="gridToggle('R3C11');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R3C12" onclick="gridToggle('R3C12');"></button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="blank-cell" id="R4C1" onclick="gridToggle('R4C1');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C2" onclick="gridToggle('R4C2');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C3" onclick="gridToggle('R4C3');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C4" onclick="gridToggle('R4C4');"></button>
+                    </li>
+                    <li>
+                        <button class="o2-cell" id="R4C5" disabled onclick="gridToggle('R4C5');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C6" onclick="gridToggle('R4C6');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C7" onclick="gridToggle('R4C7');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C8" onclick="gridToggle('R4C8');"></button>
+                    </li>
+                    <li>
+                        <button class="o4-cell" id="R4C9" disabled onclick="gridToggle('R4C9');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C10" onclick="gridToggle('R4C10');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C11" onclick="gridToggle('R4C11');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R4C12" onclick="observerGridToggleAndObstacleChange('R4C12');"></button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="blank-cell" id="R5C1" onclick="gridToggle('R5C1');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R5C2" onclick="gridToggle('R5C2');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R5C3" onclick="gridToggle('R5C3');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R5C4" onclick="gridToggle('R5C4');"></button>
+                    </li>
+                    <li>
+                        <button class="o2-cell" id="R5C5" disabled onclick="gridToggle('R5C5');"></button>
+                    </li>
+                    <li>
+                        <button class="o3-cell" id="R5C6" disabled onclick="gridToggle('R5C6');"></button>
+                    </li>
+                    <li>
+                        <button class="o3-cell" id="R5C7" disabled onclick="gridToggle('R5C7');"></button>
+                    </li>
+                    <li>
+                        <button class="o3-cell" id="R5C8" disabled onclick="gridToggle('R5C8');"></button>
+                    </li>
+                    <li>
+                        <button class="o3-cell" id="R5C9" disabled onclick="gridToggle('R5C9');"></button>
+                    </li>
+                    <li>
+                        <button class="o3-cell" id="R5C10" disabled onclick="gridToggle('R5C10');"></button>
+                    </li>
+                    <li>
+                        <button class="o3-cell" id="R5C11" disabled onclick="gridToggle('R5C11');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R5C12" onclick="gridToggl('R5C12');"></button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="blank-cell" id="R6C1" onclick="gridToggle('R6C1');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C2" onclick="gridToggle('R6C2');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C3" onclick="gridToggle('R6C3');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C4" onclick="gridToggle('R6C4');"></button>
+                    </li>
+                    <li>
+                        <button class="o2-cell" id="R6C5" disabled onclick="gridToggle('R6C5');"></button>
+                    </li>
+                    <li>
+                        <button class="finish-cell" id="R6C6" onclick="finishTileReached();"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C7" onclick="gridToggle('R6C7');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C8" onclick="gridToggle('R6C8');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C9" onclick="gridToggle('R6C9');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C10" onclick="gridToggle('R6C10');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C11" onclick="gridToggle('R6C11');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R6C12" onclick="gridToggle('R6C12');"></button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="blank-cell" id="R7C1" onclick="gridToggle('R7C1');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C2" onclick="gridToggle('R7C2');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C3" onclick="gridToggle('R7C3');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C4" onclick="gridToggle('R7C4');"></button>
+                    </li>
+                    <li>
+                        <button class="o2-cell" id="R7C5" disabled onclick="gridToggle('R7C5');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C6" onclick="gridToggle('R7C6');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C7" onclick="gridToggle('R7C7');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C8" onclick="gridToggle('R7C8');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C9" onclick="gridToggle('R7C9');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C10" onclick="gridToggle('R7C10');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C11" onclick="gridToggle('R7C11');"></button>
+                    </li>
+                    <li>
+                        <button class="blank-cell" id="R7C12" onclick="gridToggle('R7C12');"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="game-instructions">
+            <center>
+                <p><strong><u>Instructions</u></strong></p>
+                <p>The green circular tile indicates the starting tile, and the red circular tile indicates the finish tile. Any other coloured tiles indicate obstructions. Your mission is to communicate as a team and navigate through the maze together, one tile at a time, from start tile to finish tile. Each of you can see different obstructions so keep in mind that there may be dangers that you cannot see on your map. Good luck!</p>
+                
+                <p>TIP: <u>One click</u> on a blank cell shades the cell grey - you can use that to keep track of where you are in the maze. A <u>second click</u> turns the cell red - you can use this to keep track of the location of obstacles.  </p>
+            </center>
+        </div>
+    </body>
+</html>
+    
+    
