@@ -10,3 +10,8 @@ My interactive prototype's code base can be found in folder 'drew'. To deploy, n
 Jessica Rock (45179194) documentation [Documentation Overview](https://github.com/michelle-owen/DECO3500/wiki/Overview---Jess)
 
 To access the interactive proof-of-concept design, please click [here](https://jessrock.github.io/). This link will take you to the home page of the web-based experience. The code base can be found in the repository folder titled '[Communi-gate](https://github.com/michelle-owen/DECO3500/tree/master/Communi-gate)'. For further information outlining the research, development, and user interaction of the proposed design, please view the Documentation Overview linked above.
+
+## Lorraine
+Lorraine Han (45307643) documentation: [Documentation Overview](https://github.com/michelle-owen/DECO3500/wiki/LH-Documentation-Overview)
+
+My interactive proof-of-concept prototype can be accessed [here](https://lor-rani.github.io/). Further information about the research, development and evaluation of the prototype can be found in the Documentation Overview.
