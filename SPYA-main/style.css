@@ -1,0 +1,313 @@
+body {
+    background-color: black;
+}
+
+
+h2 {
+    color: black;
+    font-size:3vw;
+}
+
+h1 {
+}
+
+.players {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.player {
+    width: 25%;
+    height: 15vw;
+    float: left;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.player:hover {
+    transform:scale(1.1);
+}
+
+#p1 {
+    background-color:antiquewhite;
+}
+
+#p2 {
+    background-color:beige;
+}
+
+#p4 {
+    background-color:cornsilk;
+}
+
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#roundtext {
+    position:absolute;
+    top:25vw;
+    left:50%;
+    font-size: 10vw;
+    color:white;
+    transform: translate(-50%, 50%);
+    -ms-transform:translate(-50%, 50%);
+}
+
+
+
+.processor {
+    height: 40vw;
+    position: relative;
+    margin-top: 20vw;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+
+#tutorial {
+    
+    float:left;
+    margin-left:5vw;
+    margin-top:5vw;
+}
+
+#step1 {
+    font-size:4vw;
+}
+
+#step2 {
+    font-size: 2vw;
+    box-sizing: border-box;
+}
+#step2text {
+    width: 65%;
+    float: left;
+}
+
+#startgame {
+    padding: 6vw 6vw;
+    font-size: 6vw;
+    float: right;
+    margin-top: 5vw;
+    margin-right: 5vw;
+    border-radius: 3vw;
+    animation: blinkingBackground 0.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes blinkingBackground {
+    0% {
+        background-color: greenyellow;
+    }
+
+    25% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: rgb(0, 36, 255);
+    }
+
+    75% {
+        background-color: orangered;
+    }
+
+    100% {
+        background-color: rgb(255, 0, 220);
+    }
+}
+
+
+
+#vote {
+    width:100%;
+    z-index:-5;
+    text-align:center;
+    background-color:black;
+    color:greenyellow;
+}
+
+#pointer {
+    margin-top:-10vw;
+    font-size: 5vw;
+    position: absolute;
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: 10%;
+    }
+
+    50% {
+        left: 90%;
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+#timer {
+    width: 20vw;
+    height: 20vw;
+    float: left;
+    margin-left: 10vw;
+    margin-top: 5vw;
+    background-color: black;
+    color: white;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 20vw;
+}
+
+
+#operations {
+    position:absolute;
+    margin-top: 2vw;
+    margin-left: 10vw;
+}
+
+
+.operator {
+    
+    background-color: pink;
+    border: none;
+    color: white;
+    width:6vw;
+    height:6vw;
+    float: left;
+    margin-top: 25vw;
+    margin-right:1vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.operator .tooltiptext {
+    visibility: hidden;
+    width: 30vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    border-radius: 1vw;
+    padding: 1vw 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-top: -7vw;
+    margin-left: -22vw;
+}
+
+#voice .tooltiptext {
+    margin-left: -15vw;
+}
+
+#ring .tooltiptext {
+    margin-top:-7vw;
+    margin-left: -8vw;
+}
+
+.operator .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.operator:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.turns{
+    font-size:1.6vw;
+    float:right;
+    margin-right: 20vw;
+    color:black;
+
+}
+
+
+
+.voiceshap{
+    height:0.8vw;
+
+}
+
+.rounds {
+    position: unset;
+}
+
+.round {
+    
+    
+    background-color: white;
+}
+
+
+
+
+.cardcontent {
+    position:absolute;
+    margin-top: 5vw;
+    box-sizing:border-box;
+}
+
+.card {
+    width: 20vw;
+    height: 20vw;
+    margin-left: 10vw;
+    float: left;
+    background-color: greenyellow;
+    box-shadow: 0 4px 8px 0 #26fdb7;
+    transition: 0.3s;
+}
+
+.word {
+    font-size:4vw;
+    margin-top:8vw;
+    text-align:center;
+}
+
+.save {
+    background-color: pink;
+    border: none;
+    color: white;
+    padding: 1vw 1.5vw;
+    float:left;
+    margin-left:0vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+
+.definition {
+    margin-left:10vw;
+    float: left;
+    color: white;
+    font-size:1.5vw;
+}

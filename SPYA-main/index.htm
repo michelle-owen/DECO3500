@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="players">
+
+        <div class="player" id="p1" onclick="displayData(this)">
+            <h2>Player 1</h2>
+            <div id="pv3" style="color: lightpink; display:none"> &#128070 </div>
+        </div>
+
+        <div class="player" id="p2" onclick="displayData(this)">
+            <h2>Player 2</h2>
+            <div id="pv3" style="color: lightpink; display:none"> &#128070 </div>
+        </div>
+
+        <div class="player" id="p3" onclick="displayData(this)">
+            <h2>Player 3</h2>
+            <div id="v1" style="color:black; display:none"> &#128070 </div>
+            <div id="v2" style="color:black; display:none"> &#128070 </div>
+            <div id="v3" style="color:black; display:none"> &#128070 </div>
+            <div id="pv3" style="color: lightpink; display:none"> &#128070 </div>
+
+        </div>
+
+        <div class="player" id="p4" onclick="displayData(this)">
+            <h2>Player 4</h2>
+            <div id="pv3" style="color: lightpink; display:none"> &#128070 </div>
+        </div>
+
+    </div>
+
+
+    <!--
+
+     <div class="rounds">
+         <div class="round" id="r1">
+             <h2>Round 1</h2>
+         </div>
+
+         <div class="round" id="r2">
+             <h2>Round 2</h2>
+         </div>
+
+         <div class="round" id="r3">
+             <h2>Round 3</h2>
+         </div>
+
+     </div>
+
+         -->
+
+
+
+
+
+<div id="overlay" style="display:none">
+
+    <div id="roundtext"> Round 1 </div>
+
+</div>
+
+
+
+
+    <div class="processor">
+
+
+        <div id="tutorial">
+
+            <div id="tutext">
+
+                <div id="step1">
+                    <p>
+                        Choose your player number at the top &#128070;
+                    </p>
+
+                </div>
+
+                <div id="step2" style="display:none">
+                    <p id="step2text">
+                        Wow. It is exciting that you choose to be <span id="playernum">Player X</span>!
+                        <br />
+                        In you four, there will be one spy &#127770 and three fellows &#127773 &#127773 &#127773 .
+                        <br />
+                        Each of you will get your secret word below &#128071; but &#127770 will have a different word from the rest of others.
+                        <br />
+                        Use your word to make sentence which should make sense in certain context
+                        and speak that out in your turn
+                        <b>with your word replaced by a 'Beep'. </b>
+                        <br />
+                        Be careful!
+                        
+                        &#127770 will win if you could not vote him/her(or maybe yourself) out in three rounds!
+                        <br />
+                        Press 'Go' if you are ready!
+
+                    </p>
+                    <button id="startgame" onclick="start()"> GO! </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="vote" style="display:none">
+            <div id="pointer" style="color:lightpink"> &#128070 </div>
+            <div id="callforvoting"> Whoes word is different? </div>
+            <div id="win" style="display:none"> Congrats buddies:) Player 3 is definately the spy! </div>
+            <div id="guess" style="display:none"> </div>
+            <div id="know" style="display:none"></div>
+        </div>
+
+        <div id="timer" style="display:none">
+            30
+        </div>
+
+        <div id="operations" style="display:none">
+            <button class="operator" id="pause"> &#8987 
+                <span class="tooltiptext">Finish before time out</span>
+            </button>
+            <button class="operator" id="voice">
+                &#127908
+                <span class="tooltiptext">mute yourself</span>
+            </button>
+            <button class="operator" id="ring" onclick="suspect()">
+                &#128373
+                <span class="tooltiptext">suspect current player</span>
+
+            </button>
+
+        </div>
+
+
+        <div class="turns">
+
+            <div class="turn" id="Player 1" >
+                <p id="o1" style="display:none">Player 1 is making sentence.</p>
+                <audio controls class="voiceshap" id="voice1" style="display:none">
+                    <source src="audio/1.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>                
+                <p id="e1" style="display:none">Player 1 finished her turn and was suspected by 1 time.</p>
+            </div>
+
+            <div class="turn" id=" Player 2">
+                <p id="o2" style="display:none">Player 2 is making sentence.</p>
+                <audio controls class="voiceshap" id="voice2" style="display:none">
+                    <source src="audio/2.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p id="e2" style="display:none">Player 2 finished her turn and was suspected by 0 time.</p>
+
+            </div>
+
+            <div class="turn" id=" Player 3">
+                <p id="o3" style="display:none">Player 3 is making sentence.</p>
+                <audio controls class="voiceshap" id="voice3" style="display:none">
+                    <source src="audio/3.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p id="e3" style="display:none">Player 3 finished her turn and was suspected by 8 times.</p>
+            </div>
+
+            <div class="turn" id=" Player 4">
+                <p id="o4" style="display:none">Player 4 is making sentence.</p>
+                <audio controls class="voiceshap" id="voice4" style="display:none">
+                    <source src="audio/4.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p id="e4" style="display:none">Player 4 finished her turn and was suspected by 0 time.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="cardcontent" id="spy" style="display:none">
+
+        <div class="card">
+
+            <p class="word">Mad</p>
+
+
+        </div>
+
+        <button class="save"> &#10084 </button>
+
+        <div class="definition">
+            <h3>Definition</h3>
+            <i>Adjective</i>
+            <p>1.very angry.</p>
+            <p>2.very enthusiastic about someone or something.</p>
+            <p>3.for describing a cool persson (Australia slang)</p>
+        </div>
+
+    </div>
+
+
+
+    <div class="cardcontent" id="normal" style="display:none">
+
+        <div class="card">
+
+            <p class="word">
+                irritated
+            </p>
+
+        </div>
+
+        <button class="save"> &#10084 </button>
+
+        <div class="definition">
+            <h3>Definition</h3>
+            <i>Adjective</i>
+            <p>1.showing or feeling slightly anger; annoyed.</p>
+            <p>2.the simple past form of 'irretate', irretate: make (someone) annoyed, impatient, or angry.</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html> 
